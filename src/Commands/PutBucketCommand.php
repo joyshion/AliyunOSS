@@ -46,7 +46,7 @@ EOT;
         return $build->setMethod('PUT')
             ->setBucket($options['bucket'])
             ->setBody($this->getBody($options['region']))
-            ->addOSSHeaders($acl)
+            ->setOSSHeaders($acl)
             ->build($options);
     }
 

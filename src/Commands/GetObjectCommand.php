@@ -39,7 +39,7 @@ class GetObjectCommand extends Command
         return $build->setMethod('GET')
             ->setBucket($options['bucket'])
             ->setPath($options['path'])
-            ->addHeaders($this->getParams($options, $this->headers_keys))
+            ->setHeaders($this->getParams($options, $this->headers_keys))
             ->setParams($this->getParams($options, $this->params_keys))
             ->build($options);
     }

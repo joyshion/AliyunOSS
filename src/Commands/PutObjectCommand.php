@@ -36,8 +36,8 @@ class PutObjectCommand extends Command
             ->setBucket($options['bucket'])
             ->setPath($options['path'])
             ->setBody($options['contents'])
-            ->addHeaders($this->getParams($options, $this->header_keys))
-            ->addOSSHeaders($this->getParams($options, $this->oss_header_keys))
+            ->setHeaders($this->getParams($options, $this->header_keys))
+            ->setOSSHeaders($this->getParams($options, $this->oss_header_keys))
             ->build($options);
     }
 

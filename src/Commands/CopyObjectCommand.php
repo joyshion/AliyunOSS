@@ -30,7 +30,7 @@ class CopyObjectCommand extends Command
         return $build->setMethod('PUT')
             ->setBucket($options['bucket'])
             ->setPath($options['path'])
-            ->addOSSHeaders($this->getParams($options, $this->oss_header_keys))
+            ->setOSSHeaders($this->getParams($options, $this->oss_header_keys))
             ->build($options);
     }
 

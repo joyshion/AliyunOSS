@@ -26,7 +26,7 @@ class HeaderObjectCommand extends Command
         return $build->setMethod('HEAD')
             ->setBucket($options['bucket'])
             ->setPath($options['path'])
-            ->addHeaders($this->getParams($options, $this->headers_keys))
+            ->setHeaders($this->getParams($options, $this->headers_keys))
             ->build($options);
     }
 

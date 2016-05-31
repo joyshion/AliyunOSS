@@ -29,7 +29,7 @@ class PutObjectAclCommand extends Command
         return $build->setMethod('PUT')
             ->setBucket($options['bucket'])
             ->setPath($options['path'])
-            ->addOSSHeaders($this->_getAcl($options['acl']))
+            ->setOSSHeaders($this->_getAcl($options['acl']))
             ->build($options);
     }
 

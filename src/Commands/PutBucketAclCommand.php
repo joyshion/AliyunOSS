@@ -28,7 +28,7 @@ class PutBucketAclCommand extends Command
 
         return $build->setMethod('PUT')
             ->setBucket($options['bucket'])
-            ->addOSSHeaders($this->_getAcl($options['acl']))
+            ->setOSSHeaders($this->_getAcl($options['acl']))
             ->setParams('acl')
             ->build($options);
     }
